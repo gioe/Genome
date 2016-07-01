@@ -11,6 +11,8 @@ import ARSLineProgress
 
 //given more time, i'd implement a cache system here so we're not querying google every time the view loads
 
+///ViewController displaying details of specifically chosen GNMPlaceModel
+
 class GNMLocationDetailViewController: UIViewController {
 
     var place : GNMPlaceModel!

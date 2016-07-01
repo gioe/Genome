@@ -10,14 +10,15 @@ import Foundation
 import FBSDKLoginKit
 import FBSDKCoreKit
 
+
+private let LoginStatusKeyForDefaults = "Login Status"
+
 /**
  User's login status
  
  - LoggedOut: User is logged out
  - LoggedIn: User is logged in
  */
-
-private let LoginStatusKeyForDefaults = "Login Status"
 
 enum GNMLoginStatus : Int {
     

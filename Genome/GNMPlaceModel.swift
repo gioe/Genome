@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 ///  A model of place objects based on Places in the GoogleMaps API
 class GNMPlaceModel : NSObject {
     

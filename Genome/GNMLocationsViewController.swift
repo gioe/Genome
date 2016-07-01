@@ -13,6 +13,7 @@ import ARSLineProgress
 private let LocationCellIdentifer = "LocationCell"
 private let LocationSequeIdentifier = "showLocationDetail"
 
+///TableViewController of nearby locations
 class GNMLocationsViewController: UITableViewController {
     
     var placeData = [GNMPlaceModel]?()
@@ -24,7 +25,6 @@ class GNMLocationsViewController: UITableViewController {
         //thanks to the tab controller, this VC is initialized very early on in the apps lifecycle so we can gather the data before the user accesses the screen. not stricly necessary but allows for less UI lag.
         ARSLineProgress.show()
         refreshTable()
-        
     }
     
     override func viewDidLoad() {
@@ -35,12 +35,13 @@ class GNMLocationsViewController: UITableViewController {
     }
     
     /**
-     Generates data for the tableview and refreshes it upon succss
+     Generates data for the tableview and refreshes it upon succss. Displays an error message if it fails.
      */
     
     func refreshTable() {
         
         placesManager.getNearbyLocationsWithCompletion{ (data,error) in
+            
             if ARSLineProgress.shown{
                 ARSLineProgress.hide()
             }
@@ -105,8 +106,11 @@ class GNMLocationsViewController: UITableViewController {
         }
     }
     
+    /**
+     Displays an alert view if location services requests fail
+     */
+    
     func throwErrorPop(error: NSError?) {
-        //display an error alert in case any of the location services requests fail
         
         let alert = UIAlertController.init(title: "Genome", message: error?.localizedDescription , preferredStyle: .Alert)
         let dismissAction = UIAlertAction.init(title: "OK!", style: .Cancel, handler: { (action) in

@@ -11,6 +11,7 @@ import MapKit
 import CoreLocation
 import GoogleMaps
 
+///Map ViewController
 class GNMMapViewController: UIViewController, MKMapViewDelegate {
     
     var currentPlace : GMSPlace?
@@ -32,6 +33,7 @@ class GNMMapViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //initialze location manager
         locationManager = CLLocationManager()
         

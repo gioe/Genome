@@ -13,13 +13,15 @@ import Alamofire
 private let GoogleApiKey = "AIzaSyAe6warIT1Ngcvui5Q6DNYoUQ2re0xga3s"
 typealias ImageRequestCompletionBlock = (UIImage?, NSError?) -> (Void)
 
+///Class for handling image management
+
 class GNMLocationImageModel: UIImage {
     
     let imageCache = AutoPurgingImageCache()
     
     /**
-     Generates a query url for PlaceModel object
-     - parameter place : PlaceModel object used to create query string
+     Generates a query url for GNMPlaceModel object
+     - parameter place : GNMPlaceModel object used to create query string
      - returns: String used to generate URL for HTTP request
      
      */
@@ -35,8 +37,8 @@ class GNMLocationImageModel: UIImage {
     }
     
     /**
-     Use AlamoFire to request and save image for PlaceModel if one doesn't exist locally
-     - parameter place : PlaceModel object whose image we want to request
+     Use AlamoFire to request and save image for GNMPlaceModel if one doesn't exist locally
+     - parameter place : GNMPlaceModel object whose image we want to request
      - paramter completion : Closure which returns optional UIImage after successful request or an error
      */
     
@@ -56,8 +58,8 @@ class GNMLocationImageModel: UIImage {
     }
     
     /**
-     Returns an image for PlaceModel
-     - parameter place : PlaceModel object whose image we want
+     Returns an image for GNMPlaceModel
+     - parameter place : GNMPlaceModel object whose image we want
      - parameter completion : closure returning optional UIImage if it exists
      
      */
@@ -75,8 +77,8 @@ class GNMLocationImageModel: UIImage {
     }
     
     /**
-     Returns a cached copy of a PlaceModel's image
-     - parameter place : PlaceModel object whose image we want
+     Returns a cached copy of a GNMPlaceModel's image
+     - parameter place : GNMPlaceModel object whose image we want
      - returns: Optinal UIImage if it exists in the cache
      */
     

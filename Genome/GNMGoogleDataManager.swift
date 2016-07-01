@@ -20,6 +20,8 @@ typealias NearbyPlacesRequestCompletionBlock = ([GNMPlaceModel]?, NSError?) -> (
 typealias JSONRequestCompletionBlock = (JSON?, NSError?) -> ()
 typealias GetIndividualPlaceRequestCompletionBlock = (GMSPlace?, NSError?) -> ()
 
+///Class for managing all HTTP requests
+ 
 class GNMGoogleDataManager : NSObject{
     
     let imageCache = AutoPurgingImageCache()

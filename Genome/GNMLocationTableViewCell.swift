@@ -8,6 +8,8 @@
 
 import UIKit
 
+///TableViewCell for GNMPlaceModel
+
 class GNMLocationTableViewCell: UITableViewCell {
 
     @IBOutlet private weak var locationImage: UIImageView!
@@ -18,7 +20,7 @@ class GNMLocationTableViewCell: UITableViewCell {
     
     /**
      Configures TableViewCell with data we have for PlaceModel
-     - parameter place : PlaceModel object used to generate cell UI
+     - parameter place : GNMPlaceModel object used to generate cell UI
      */
     
     func setUpCell(place: GNMPlaceModel) {
