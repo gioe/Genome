@@ -16,7 +16,12 @@ class LocationTableViewCell: UITableViewCell {
     let placesManager = GoogleDataManager()
     let imageManager = LocationImageModel()
     
-    func setUpCell(place: Place) {
+    /**
+     Configures TableViewCell with data we have for PlaceModel
+     - parameter place : PlaceModel object used to generate cell UI
+     */
+    
+    func setUpCell(place: PlaceModel) {
         
         startActivityIndicator()
        imageManager.grabImageForPlace(place) { (image, error) -> (Void) in
@@ -27,6 +32,9 @@ class LocationTableViewCell: UITableViewCell {
         self.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
     }
 
+    /**
+     Starts an activity indicator if no image has been set
+     */
     func startActivityIndicator(){
         if let activityIndicator = activityIndicator{
             activityIndicator.startAnimating()
@@ -34,6 +42,9 @@ class LocationTableViewCell: UITableViewCell {
         }
     }
     
+    /**
+     Stops an activity indicator if image is set
+     */
     func stopActivityIndicator(){
         if let activityIndicator = self.activityIndicator{
             activityIndicator.stopAnimating()

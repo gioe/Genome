@@ -45,6 +45,10 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
     }
     
+    /**
+     Displays an alert view if Facebook login should fail
+     */
+    
     func displayLoginError(){
         
         //display an error alert in case facebook login fails

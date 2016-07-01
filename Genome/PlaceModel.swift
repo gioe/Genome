@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Place : NSObject {
+class PlaceModel : NSObject {
     var id : String
     var name : String
     var imageUrl : String?

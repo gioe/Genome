@@ -10,7 +10,7 @@ import UIKit
 
 class LocationDetailViewController: UIViewController {
 
-    var place : Place!
+    var place : PlaceModel!
     let imageHandler = LocationImageModel()
     let placesManager = GoogleDataManager()
 
@@ -20,7 +20,7 @@ class LocationDetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var locationImage: UIImageView!
  
-    init(place: Place){
+    init(place: PlaceModel){
         self.place = place
         super.init(nibName: nil, bundle: nil)
     }

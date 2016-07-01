@@ -13,22 +13,33 @@ private let LocationCellIdentifer = "LocationCell"
 
 class LocationsViewController: UITableViewController {
     
-    var placeData = [Place]?()
+    var placeData = [PlaceModel]?()
     let placesManager = GoogleDataManager()
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         
         //thanks to the tab controller, this VC is initialized very early on in the apps lifecycle so we can gather the data before the user accesses the screen. not stricly necessary but allows for less UI lag.
-        placesManager.getNearbyLocationsWithCompletion{ (data,error) in
-            if (data != nil){
-                self.placeData = data
-            }
-        }
+        refreshTable()
     }
     
     override func viewDidLoad() {
          tableView.registerNib(UINib(nibName: "LocationTableViewCell", bundle: nil), forCellReuseIdentifier: LocationCellIdentifer)
+        refreshControl!.addTarget(self, action: #selector(LocationsViewController.refreshTable), forControlEvents: UIControlEvents.ValueChanged)
+    }
+    
+    /**
+     Generates data for the tableview and refreshes it upon succss
+     */
+    
+    func refreshTable() {
+        placesManager.getNearbyLocationsWithCompletion{ (data,error) in
+            if (data != nil){
+                self.placeData = data
+                self.tableView.reloadData()
+                self.refreshControl?.endRefreshing()
+            }
+        }
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

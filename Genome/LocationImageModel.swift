@@ -17,7 +17,14 @@ class LocationImageModel: UIImage {
     
     let imageCache = AutoPurgingImageCache()
     
-    func queryStringForImageForPlace(place : Place) -> String{
+    /**
+     Generates a query url for PlaceModel object
+     - parameter place : PlaceModel object used to create query string
+     - returns: String used to generate URL for HTTP request
+     
+     */
+    
+    func queryStringForImageForPlace(place : PlaceModel) -> String{
         
         if let imageURL = place.imageUrl{
             return "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=\(imageURL)&key=\(GoogleApiKey)"
@@ -27,7 +34,13 @@ class LocationImageModel: UIImage {
         
     }
     
-    func makeRequestForImageFromPlace(place : Place, completion : ImageRequestCompletionBlock) {
+    /**
+     Use AlamoFire to request and save image for PlaceModel if one doesn't exist locally
+     - parameter place : PlaceModel object whose image we want to request
+     - paramter completion : Closure which returns optional UIImage after successful request or an error
+     */
+    
+    func makeRequestForImageFromPlace(place : PlaceModel, completion : ImageRequestCompletionBlock) {
         Alamofire.request(.GET, queryStringForImageForPlace(place), parameters: nil)
             .responseImage { response in
                 print(response)
@@ -42,7 +55,14 @@ class LocationImageModel: UIImage {
         }
     }
     
-    func grabImageForPlace(place : Place, completion : ImageRequestCompletionBlock){
+    /**
+     Returns an image for PlaceModel
+     - parameter place : PlaceModel object whose image we want
+     - parameter completion : closure returning optional UIImage if it exists
+     
+     */
+    
+    func grabImageForPlace(place : PlaceModel, completion : ImageRequestCompletionBlock){
         //check if the image is already cached and return it. if not, make the server request
         if let image = returnCachedImage(place.name){
             completion(image, nil)
@@ -53,6 +73,12 @@ class LocationImageModel: UIImage {
             })
         }
     }
+    
+    /**
+     Returns a cached copy of a PlaceModel's image
+     - parameter place : PlaceModel object whose image we want
+     - returns: Optinal UIImage if it exists in the cache
+     */
     
     func returnCachedImage(name: String) -> UIImage? {
         return imageCache.imageWithIdentifier(name)
