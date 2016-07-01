@@ -12,6 +12,7 @@ target 'Genome' do
   pod 'AlamofireImage', '~> 2.4'
   pod 'GoogleMaps'
   pod 'SwiftyJSON'
+  pod 'ARSLineProgress', '~> 1.0'
   
   target 'GenomeTests' do
     inherit! :search_paths

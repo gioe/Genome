@@ -2,6 +2,7 @@ PODS:
   - Alamofire (3.4.0)
   - AlamofireImage (2.4.0):
     - Alamofire (~> 3.3)
+  - ARSLineProgress (1.1.1)
   - Bolts (1.7.0):
     - Bolts/AppLinks (= 1.7.0)
     - Bolts/Tasks (= 1.7.0)
@@ -20,6 +21,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 3.4)
   - AlamofireImage (~> 2.4)
+  - ARSLineProgress (~> 1.0)
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
@@ -29,6 +31,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
   AlamofireImage: 87408b652e0f5ae5fe364035f15aea8b9b24c77e
+  ARSLineProgress: e54c736d1cf043229c2038d35572f9977f240ebd
   Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
   FBSDKCoreKit: 6e56d5a2a64a755ad4efb5dbeee8f82fb1b99775
   FBSDKLoginKit: 03f68a8d48c2c8bb81d7eb8097973d483543e1f6
@@ -36,6 +39,6 @@ SPEC CHECKSUMS:
   GoogleMaps: b20a103ff307f58392e603cf142e59d7e30374c1
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: b60057ee40065e766e106573d3b5c25f4bde5da8
+PODFILE CHECKSUM: f254aa6116e41269cb2fa47c2ca699f81caada18
 
 COCOAPODS: 1.0.1

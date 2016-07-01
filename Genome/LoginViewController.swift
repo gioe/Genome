@@ -11,7 +11,7 @@ import FBSDKLoginKit
 
 private let HomeViewSegue = "pushHomeView"
 
-class ViewController: UIViewController, FBSDKLoginButtonDelegate {
+class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     var sessionUser = User()
     
     @IBOutlet weak var loginButton: FBSDKLoginButton! {
@@ -34,6 +34,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         if result.token != nil{
+            loginButton.hidden = true
             sessionUser.loginStatus = .LoggedIn
              self.presentViewController(sessionUser.loginStatus.associatedViewController, animated: true, completion: nil)
         } else {

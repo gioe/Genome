@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ARSLineProgress
 
 class LocationDetailViewController: UIViewController {
 
@@ -30,22 +31,22 @@ class LocationDetailViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        
+        ARSLineProgress.show()
         //we now need to query google again to get more place information. we only got a few bits of information in the initial query. now we get some more.
         placesManager.getPlaceFromID(place.id) { (place, error) in
             
             if let website = place?.website{
                 self.websiteLabel.text = website.absoluteString
-                self.place.webSite = website
             }
             if let address = place?.formattedAddress{
                 self.addressLabel.text = address
-                self.place.address = address
                 
             }
             if let phone = place?.phoneNumber{
                 self.phoneNumberLabel.text = phone
-                self.place.phoneNumber = phone
+            }
+            if ARSLineProgress.shown{
+                ARSLineProgress.hide()
             }
         }
     }

@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import ARSLineProgress
 
 private let LocationCellIdentifer = "LocationCell"
 
@@ -20,6 +21,7 @@ class LocationsViewController: UITableViewController {
         super.init(coder: aDecoder)!
         
         //thanks to the tab controller, this VC is initialized very early on in the apps lifecycle so we can gather the data before the user accesses the screen. not stricly necessary but allows for less UI lag.
+        ARSLineProgress.show()
         refreshTable()
     }
     
@@ -33,11 +35,15 @@ class LocationsViewController: UITableViewController {
      */
     
     func refreshTable() {
+        
         placesManager.getNearbyLocationsWithCompletion{ (data,error) in
             if (data != nil){
                 self.placeData = data
                 self.tableView.reloadData()
                 self.refreshControl?.endRefreshing()
+                if ARSLineProgress.shown{
+                    ARSLineProgress.hide()
+                }
             }
         }
     }

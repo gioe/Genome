@@ -23,7 +23,7 @@
 		1AFF0FCF1D260D9D00575541 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF0FCB1D260D9C00575541 /* LocationDetailViewController.swift */; };
 		1AFF0FD01D260D9D00575541 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF0FCC1D260D9C00575541 /* LocationsViewController.swift */; };
 		1AFF0FD11D260D9D00575541 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF0FCD1D260D9D00575541 /* MapViewController.swift */; };
-		1AFF0FD21D260D9D00575541 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF0FCE1D260D9D00575541 /* ViewController.swift */; };
+		1AFF0FD21D260D9D00575541 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF0FCE1D260D9D00575541 /* LoginViewController.swift */; };
 		1AFF0FD61D260E2500575541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF0FD51D260E2500575541 /* AppDelegate.swift */; };
 		E9D11418616634A4876CC2C7 /* Pods_GenomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED450AAD666F96AFE137033 /* Pods_GenomeUITests.framework */; };
 		FF492EDDEF48517C9D0F9559 /* Pods_GenomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B000EA17D3F32414692D8F81 /* Pods_GenomeTests.framework */; };
@@ -67,7 +67,7 @@
 		1AFF0FCB1D260D9C00575541 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationDetailViewController.swift; path = Genome/LocationDetailViewController.swift; sourceTree = SOURCE_ROOT; };
 		1AFF0FCC1D260D9C00575541 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationsViewController.swift; path = Genome/LocationsViewController.swift; sourceTree = SOURCE_ROOT; };
 		1AFF0FCD1D260D9D00575541 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Genome/MapViewController.swift; sourceTree = SOURCE_ROOT; };
-		1AFF0FCE1D260D9D00575541 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Genome/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		1AFF0FCE1D260D9D00575541 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Genome/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		1AFF0FD31D260E1A00575541 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AFF0FD51D260E2500575541 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Genome/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		1BDBE8A084A9788D46802686 /* Pods-GenomeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenomeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GenomeUITests/Pods-GenomeUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 				1AFF0FCB1D260D9C00575541 /* LocationDetailViewController.swift */,
 				1AFF0FCC1D260D9C00575541 /* LocationsViewController.swift */,
 				1AFF0FCD1D260D9D00575541 /* MapViewController.swift */,
-				1AFF0FCE1D260D9D00575541 /* ViewController.swift */,
+				1AFF0FCE1D260D9D00575541 /* LoginViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -488,7 +488,7 @@
 				1AC446B01D24552B00F78515 /* LocationTableViewCell.swift in Sources */,
 				1AFF0FD01D260D9D00575541 /* LocationsViewController.swift in Sources */,
 				1AFF0FD11D260D9D00575541 /* MapViewController.swift in Sources */,
-				1AFF0FD21D260D9D00575541 /* ViewController.swift in Sources */,
+				1AFF0FD21D260D9D00575541 /* LoginViewController.swift in Sources */,
 				1AC446BE1D249CA000F78515 /* GoogleDataManager.swift in Sources */,
 				1A6281971D2361DC0070C89D /* LoginHandler.swift in Sources */,
 				1A62816E1D2360440070C89D /* Genome.xcdatamodeld in Sources */,
