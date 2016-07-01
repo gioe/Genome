@@ -10,6 +10,13 @@ import Foundation
 import FBSDKLoginKit
 import FBSDKCoreKit
 
+/**
+ User's login status
+ 
+ - LoggedOut: User is logged out
+ - LoggedIn: User is logged in
+ */
+
 enum LoginStatus : Int {
     
     //only two possible statuses
