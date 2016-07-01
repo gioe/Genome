@@ -32,7 +32,6 @@ class GNMLocationDetailViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        ARSLineProgress.show()
         //we now need to query google again to get more place information. we only got a few bits of information in the initial query. now we get some more.
         placesManager.getPlaceFromID(place.id) { (place, error) in
             
@@ -53,6 +52,7 @@ class GNMLocationDetailViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        ARSLineProgress.show()
         if let place = self.place{
             nameLabel.text = place.name
             imageHandler.grabImageForPlace(place) { (image,error) -> (Void) in
