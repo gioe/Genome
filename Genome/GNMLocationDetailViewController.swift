@@ -20,7 +20,13 @@ class GNMLocationDetailViewController: UIViewController {
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var locationImage: UIImageView!
+    @IBOutlet weak var locationImage: UIImageView! {
+        didSet {
+            imageHandler.grabImageForPlace(self.place) { (image,error) -> (Void) in
+                self.locationImage.image = image
+            }
+        }
+    }
  
     init(place: GNMPlaceModel){
         self.place = place
@@ -53,11 +59,5 @@ class GNMLocationDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         ARSLineProgress.show()
-        if let place = self.place{
-            nameLabel.text = place.name
-            imageHandler.grabImageForPlace(place) { (image,error) -> (Void) in
-                self.locationImage.image = image
-            }
-        }
     }
 }

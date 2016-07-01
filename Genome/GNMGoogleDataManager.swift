@@ -14,9 +14,11 @@ import AlamofireImage
 import SwiftyJSON
 
 private let kCurrentSearchRadius = String(100)
+private let GoogleURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?"
 private let GoogleApiKey = "AIzaSyAe6warIT1Ngcvui5Q6DNYoUQ2re0xga3s"
-typealias PlaceRequestCompletionBlock = ([GNMPlaceModel]?, NSError?) -> ()
+typealias NearbyPlacesRequestCompletionBlock = ([GNMPlaceModel]?, NSError?) -> ()
 typealias JSONRequestCompletionBlock = (JSON?, NSError?) -> ()
+typealias GetIndividualPlaceRequestCompletionBlock = (GMSPlace?) -> ()
 
 class GNMGoogleDataManager : NSObject{
     
@@ -31,7 +33,7 @@ class GNMGoogleDataManager : NSObject{
      
      */
     
-    func getCurrentPlace(completionHandler: (place: GMSPlace?) -> ()) {
+    func getCurrentPlace(completionHandler: GetIndividualPlaceRequestCompletionBlock) {
         
         //get the current place from google so we can communicate our position with them
         GMSPlacesClient.sharedClient().currentPlaceWithCallback({
@@ -42,7 +44,7 @@ class GNMGoogleDataManager : NSObject{
             }
             if let placeLikelihoodList = placeLikelihoodList {
                 if let place = placeLikelihoodList.likelihoods.first?.place {
-                    completionHandler(place: place)
+                    completionHandler(place)
                 }
             }
         })
@@ -85,10 +87,10 @@ class GNMGoogleDataManager : NSObject{
         //generate a url based on whether or not we're on the first or second page of the query. first page only returns 20 results so we need to query twice with a different token the second time for the extra 5 locations
         
         if let nextPage = pageString{
-            return "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(place.coordinate.latitude),\(place.coordinate.longitude)&radius=\(kCurrentSearchRadius)&key=\(GoogleApiKey)&pagetoken=\(nextPage)"
+            return "\(GoogleURL)location=\(place.coordinate.latitude),\(place.coordinate.longitude)&radius=\(kCurrentSearchRadius)&key=\(GoogleApiKey)&pagetoken=\(nextPage)"
         }
         
-        return "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(place.coordinate.latitude),\(place.coordinate.longitude)&radius=\(kCurrentSearchRadius)&key=\(GoogleApiKey)"
+        return "\(GoogleURL)=\(place.coordinate.latitude),\(place.coordinate.longitude)&radius=\(kCurrentSearchRadius)&key=\(GoogleApiKey)"
         
     }
     
@@ -99,7 +101,7 @@ class GNMGoogleDataManager : NSObject{
      
      */
     
-    func getNearbyLocationsWithCompletion(completion : PlaceRequestCompletionBlock) {
+    func getNearbyLocationsWithCompletion(completion : NearbyPlacesRequestCompletionBlock) {
         //find a list of nearby places from our current postition
         getCurrentPlace { (place) in
             

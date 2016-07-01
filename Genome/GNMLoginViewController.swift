@@ -53,7 +53,7 @@ class GNMLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     func displayLoginError(){
         
         //display an error alert in case facebook login fails
-        let alert = UIAlertController.init(title: "Genome", message: "There seems to have been a problem signing in with Facebook. Please try again later." , preferredStyle: .Alert)
+        let alert = UIAlertController.init(title: "Genome", message: "There seems to have been a problem signing in with Facebook. Make sure you have the Facebook app installed and logged in on your device." , preferredStyle: .Alert)
         let dismissAction = UIAlertAction.init(title: "OK!", style: .Cancel, handler: { (action) in
         })
         alert.addAction(dismissAction)

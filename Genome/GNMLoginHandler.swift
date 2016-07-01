@@ -17,6 +17,8 @@ import FBSDKCoreKit
  - LoggedIn: User is logged in
  */
 
+private let LoginStatusKeyForDefaults = "Login Status"
+
 enum GNMLoginStatus : Int {
     
     //only two possible statuses
@@ -46,14 +48,14 @@ struct GNMUser {
     
     var loginStatus : GNMLoginStatus {
         get {
-            if defaults.objectForKey("Login Status") != nil {
-                return GNMLoginStatus.init(rawValue: defaults.integerForKey("Login Status"))!
+            if defaults.objectForKey(LoginStatusKeyForDefaults) != nil {
+                return GNMLoginStatus.init(rawValue: defaults.integerForKey(LoginStatusKeyForDefaults))!
             } else {
                 return .LoggedOut
             }
         }
         set(newLoginStatus){
-            defaults.setInteger(newLoginStatus.rawValue, forKey: "Login Status")
+            defaults.setInteger(newLoginStatus.rawValue, forKey: LoginStatusKeyForDefaults)
         }
     }
 }

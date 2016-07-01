@@ -11,6 +11,7 @@ import GoogleMaps
 import ARSLineProgress
 
 private let LocationCellIdentifer = "LocationCell"
+private let LocationSequeIdentifier = "showLocationDetail"
 
 class GNMLocationsViewController: UITableViewController {
     
@@ -84,14 +85,14 @@ class GNMLocationsViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         guard placeData != nil else {
-            fatalError("Application error no cell data available")
+            return
         }
         
-        self.performSegueWithIdentifier("showLocationDetail", sender: indexPath)
+        self.performSegueWithIdentifier(LocationSequeIdentifier, sender: indexPath)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "showLocationDetail") {
+        if (segue.identifier == LocationSequeIdentifier) {
             let destinationVC = segue.destinationViewController as! GNMLocationDetailViewController
             let row = (sender as! NSIndexPath).row;
             
