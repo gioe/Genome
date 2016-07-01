@@ -13,7 +13,7 @@ import Alamofire
 private let GoogleApiKey = "AIzaSyAe6warIT1Ngcvui5Q6DNYoUQ2re0xga3s"
 typealias ImageRequestCompletionBlock = (UIImage?, NSError?) -> (Void)
 
-class LocationImageModel: UIImage {
+class GNMLocationImageModel: UIImage {
     
     let imageCache = AutoPurgingImageCache()
     
@@ -24,7 +24,7 @@ class LocationImageModel: UIImage {
      
      */
     
-    func queryStringForImageForPlace(place : PlaceModel) -> String{
+    func queryStringForImageForPlace(place : GNMPlaceModel) -> String{
         
         if let imageURL = place.imageUrl{
             return "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=\(imageURL)&key=\(GoogleApiKey)"
@@ -40,7 +40,7 @@ class LocationImageModel: UIImage {
      - paramter completion : Closure which returns optional UIImage after successful request or an error
      */
     
-    func makeRequestForImageFromPlace(place : PlaceModel, completion : ImageRequestCompletionBlock) {
+    func makeRequestForImageFromPlace(place : GNMPlaceModel, completion : ImageRequestCompletionBlock) {
         Alamofire.request(.GET, queryStringForImageForPlace(place), parameters: nil)
             .responseImage { response in
                 print(response)
@@ -62,7 +62,7 @@ class LocationImageModel: UIImage {
      
      */
     
-    func grabImageForPlace(place : PlaceModel, completion : ImageRequestCompletionBlock){
+    func grabImageForPlace(place : GNMPlaceModel, completion : ImageRequestCompletionBlock){
         //check if the image is already cached and return it. if not, make the server request
         if let image = returnCachedImage(place.name){
             completion(image, nil)

@@ -12,10 +12,10 @@ import ARSLineProgress
 
 private let LocationCellIdentifer = "LocationCell"
 
-class LocationsViewController: UITableViewController {
+class GNMLocationsViewController: UITableViewController {
     
-    var placeData = [PlaceModel]?()
-    let placesManager = GoogleDataManager()
+    var placeData = [GNMPlaceModel]?()
+    let placesManager = GNMGoogleDataManager()
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -23,11 +23,14 @@ class LocationsViewController: UITableViewController {
         //thanks to the tab controller, this VC is initialized very early on in the apps lifecycle so we can gather the data before the user accesses the screen. not stricly necessary but allows for less UI lag.
         ARSLineProgress.show()
         refreshTable()
+        
     }
     
     override func viewDidLoad() {
-         tableView.registerNib(UINib(nibName: "LocationTableViewCell", bundle: nil), forCellReuseIdentifier: LocationCellIdentifer)
-        refreshControl!.addTarget(self, action: #selector(LocationsViewController.refreshTable), forControlEvents: UIControlEvents.ValueChanged)
+        
+         tableView.registerNib(UINib(nibName: "GNMLocationTableViewCell", bundle: nil), forCellReuseIdentifier: LocationCellIdentifer)
+        refreshControl!.addTarget(self, action: #selector(GNMLocationsViewController.refreshTable), forControlEvents: UIControlEvents.ValueChanged)
+        
     }
     
     /**
@@ -46,6 +49,7 @@ class LocationsViewController: UITableViewController {
                 }
             }
         }
+        
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -71,7 +75,7 @@ class LocationsViewController: UITableViewController {
             fatalError("Application error no cell data available")
         }
 
-        let cell = tableView.dequeueReusableCellWithIdentifier(LocationCellIdentifer, forIndexPath: indexPath) as! LocationTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(LocationCellIdentifer, forIndexPath: indexPath) as! GNMLocationTableViewCell
         cell.setUpCell(data[indexPath.row])
         return cell
         
@@ -88,7 +92,7 @@ class LocationsViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "showLocationDetail") {
-            let destinationVC = segue.destinationViewController as! LocationDetailViewController
+            let destinationVC = segue.destinationViewController as! GNMLocationDetailViewController
             let row = (sender as! NSIndexPath).row;
             
             //we're going to pass in the selected place as soon as the user selects a row so there is data ready to go when the screen appears. architecturally this is negotiable. just one way of doing it.

@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 import GoogleMaps
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+class GNMMapViewController: UIViewController, MKMapViewDelegate {
     
     var currentPlace : GMSPlace?
     

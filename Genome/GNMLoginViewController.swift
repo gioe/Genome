@@ -11,8 +11,8 @@ import FBSDKLoginKit
 
 private let HomeViewSegue = "pushHomeView"
 
-class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
-    var sessionUser = User()
+class GNMLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
+    var sessionUser = GNMUser()
     
     @IBOutlet weak var loginButton: FBSDKLoginButton! {
         didSet {

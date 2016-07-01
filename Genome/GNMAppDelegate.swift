@@ -12,10 +12,10 @@ import FBSDKLoginKit
 import GoogleMaps
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class GNMAppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var user = User()
+    var user = GNMUser()
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         //setup GoogleMaps for querying

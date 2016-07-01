@@ -8,7 +8,7 @@
 
 import Foundation
 ///  A model of place objects based on Places in the GoogleMaps API
-class PlaceModel : NSObject {
+class GNMPlaceModel : NSObject {
     
     /// ID of the Place from GoogleMaps
     var id : String

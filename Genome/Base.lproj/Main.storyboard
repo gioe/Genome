@@ -10,7 +10,7 @@
         <!--LoginView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="LoginView" title="LoginView" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Genome" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginView" title="LoginView" id="BYZ-38-t0r" customClass="GNMLoginViewController" customModule="Genome" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -61,13 +61,13 @@
         <!--Locations-->
         <scene sceneID="4WX-dR-b1u">
             <objects>
-                <tableViewController id="Ggw-Qy-0ur" customClass="LocationsViewController" customModule="Genome" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Ggw-Qy-0ur" customClass="GNMLocationsViewController" customModule="Genome" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zMd-Eb-zH7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xvr-sP-aEM">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xvr-sP-aEM" customClass="GNMLocationTableViewCell" customModule="Genome" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xvr-sP-aEM" id="Nhd-56-yQ7">
@@ -105,7 +105,7 @@
         <!--Location Detail View Controller-->
         <scene sceneID="e0E-kd-Bhz">
             <objects>
-                <viewController id="ffH-Ar-t9Y" customClass="LocationDetailViewController" customModule="Genome" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ffH-Ar-t9Y" customClass="GNMLocationDetailViewController" customModule="Genome" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u4V-Vn-ZkQ"/>
                         <viewControllerLayoutGuide type="bottom" id="uRm-uV-6hL"/>
@@ -197,7 +197,7 @@
         <!--Map-->
         <scene sceneID="rTQ-q4-YEW">
             <objects>
-                <viewController id="bfJ-XH-bPw" customClass="MapViewController" customModule="Genome" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bfJ-XH-bPw" customClass="GNMMapViewController" customModule="Genome" customModuleProvider="target" sceneMemberID="viewController">
                     <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="HvI-uC-ZOJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

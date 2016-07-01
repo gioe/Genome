@@ -17,7 +17,7 @@ import FBSDKCoreKit
  - LoggedIn: User is logged in
  */
 
-enum LoginStatus : Int {
+enum GNMLoginStatus : Int {
     
     //only two possible statuses
     case LoggedOut = 0
@@ -39,15 +39,15 @@ enum LoginStatus : Int {
     
 }
 
-struct User {
+struct GNMUser {
     let defaults = NSUserDefaults.standardUserDefaults()
 
     //could have used core data here but using the defaults instead so we don't overcomplicate things. defaults only needs to tell us whether the user is logged in or not so we simulate a boolean and compute the property as we go
     
-    var loginStatus : LoginStatus {
+    var loginStatus : GNMLoginStatus {
         get {
             if defaults.objectForKey("Login Status") != nil {
-                return LoginStatus.init(rawValue: defaults.integerForKey("Login Status"))!
+                return GNMLoginStatus.init(rawValue: defaults.integerForKey("Login Status"))!
             } else {
                 return .LoggedOut
             }

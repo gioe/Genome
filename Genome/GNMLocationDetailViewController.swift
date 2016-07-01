@@ -9,19 +9,20 @@
 import UIKit
 import ARSLineProgress
 
-class LocationDetailViewController: UIViewController {
+//given more time, i'd implement a cache system here so we're not querying google every time the view loads
 
-    var place : PlaceModel!
-    let imageHandler = LocationImageModel()
-    let placesManager = GoogleDataManager()
+class GNMLocationDetailViewController: UIViewController {
 
+    var place : GNMPlaceModel!
+    let imageHandler = GNMLocationImageModel()
+    let placesManager = GNMGoogleDataManager()
     @IBOutlet weak var websiteLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var locationImage: UIImageView!
  
-    init(place: PlaceModel){
+    init(place: GNMPlaceModel){
         self.place = place
         super.init(nibName: nil, bundle: nil)
     }

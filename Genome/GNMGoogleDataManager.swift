@@ -15,10 +15,10 @@ import SwiftyJSON
 
 private let kCurrentSearchRadius = String(100)
 private let GoogleApiKey = "AIzaSyAe6warIT1Ngcvui5Q6DNYoUQ2re0xga3s"
-typealias PlaceRequestCompletionBlock = ([PlaceModel]?, NSError?) -> ()
+typealias PlaceRequestCompletionBlock = ([GNMPlaceModel]?, NSError?) -> ()
 typealias JSONRequestCompletionBlock = (JSON?, NSError?) -> ()
 
-class GoogleDataManager : NSObject{
+class GNMGoogleDataManager : NSObject{
     
     let imageCache = AutoPurgingImageCache()
     var jsonArray : [AnyObject] = []
@@ -170,15 +170,15 @@ class GoogleDataManager : NSObject{
      
      */
     
-    func parseJSONResponse(responseObject: JSON) -> [PlaceModel]?{
+    func parseJSONResponse(responseObject: JSON) -> [GNMPlaceModel]?{
         //can't limit the api request so in order to get to 25, we had to go up to 40 and then cut out the first 25
         let subArray = responseObject.arrayObject![0...24]
-        var finalArray = [PlaceModel]()
+        var finalArray = [GNMPlaceModel]()
         
         //iterate through the array of 25 JSON objects and create Place objects from them
         for place in subArray {
             if let placeID = place["place_id"], name = place["name"], icon = place["icon"]{
-                let newPlace = PlaceModel.init(id: placeID as! String, name: name as! String, icon: icon as! String)
+                let newPlace = GNMPlaceModel.init(id: placeID as! String, name: name as! String, icon: icon as! String)
                 if let photoArray = place["photos"] as? [AnyObject]{
                     if let imageString = photoArray[0]["photo_reference"] as? String{
                         newPlace.imageUrl = imageString

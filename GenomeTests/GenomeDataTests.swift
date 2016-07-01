@@ -1,16 +1,15 @@
 //
-//  GenomeTests.swift
-//  GenomeTests
+//  GenomeDataTests.swift
+//  Genome
 //
-//  Created by Matt Gioe on 6/28/16.
+//  Created by Matt Gioe on 7/1/16.
 //  Copyright © 2016 Matt Gioe. All rights reserved.
 //
 
 import XCTest
-@testable import Genome
 
-class GenomeTests: XCTestCase {
-    
+class GenomeDataTests: XCTestCase {
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -20,17 +19,17 @@ class GenomeTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-    
+
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock {
             // Put the code you want to measure the time of here.
         }
     }
-    
+
 }

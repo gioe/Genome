@@ -8,20 +8,20 @@
 
 import UIKit
 
-class LocationTableViewCell: UITableViewCell {
+class GNMLocationTableViewCell: UITableViewCell {
 
     @IBOutlet private weak var locationImage: UIImageView!
     @IBOutlet private weak var locationLabel: UILabel!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
-    let placesManager = GoogleDataManager()
-    let imageManager = LocationImageModel()
+    let placesManager = GNMGoogleDataManager()
+    let imageManager = GNMLocationImageModel()
     
     /**
      Configures TableViewCell with data we have for PlaceModel
      - parameter place : PlaceModel object used to generate cell UI
      */
     
-    func setUpCell(place: PlaceModel) {
+    func setUpCell(place: GNMPlaceModel) {
         
         startActivityIndicator()
        imageManager.grabImageForPlace(place) { (image, error) -> (Void) in
