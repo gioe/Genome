@@ -45,13 +45,16 @@ class GNMLocationsViewController: UITableViewController {
             if ARSLineProgress.shown{
                 ARSLineProgress.hide()
             }
-            if (data != nil){
-                self.placeData = data
-                self.tableView.reloadData()
-                self.refreshControl?.endRefreshing()
-            } else {
+            
+            if let error = error{
                 self.throwErrorPop(error)
+                return
             }
+            
+            self.placeData = data
+            self.tableView.reloadData()
+            self.refreshControl?.endRefreshing()
+            
         }
         
     }
