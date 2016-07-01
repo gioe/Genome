@@ -1,0 +1,777 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1477D211DEF32AC506989504 /* Pods_Genome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D09E431BDF1BFE5ECB81F6 /* Pods_Genome.framework */; };
+		1A62816B1D2360440070C89D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A6281691D2360440070C89D /* Main.storyboard */; };
+		1A62816E1D2360440070C89D /* Genome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A62816C1D2360440070C89D /* Genome.xcdatamodeld */; };
+		1A6281701D2360440070C89D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A62816F1D2360440070C89D /* Assets.xcassets */; };
+		1A6281731D2360440070C89D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A6281711D2360440070C89D /* LaunchScreen.storyboard */; };
+		1A62817E1D2360440070C89D /* GenomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62817D1D2360440070C89D /* GenomeTests.swift */; };
+		1A6281891D2360440070C89D /* GenomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6281881D2360440070C89D /* GenomeUITests.swift */; };
+		1A6281971D2361DC0070C89D /* LoginHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6281961D2361DC0070C89D /* LoginHandler.swift */; };
+		1AC446B01D24552B00F78515 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC446AF1D24552B00F78515 /* LocationTableViewCell.swift */; };
+		1AC446B21D24559000F78515 /* LocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC446B11D24559000F78515 /* LocationTableViewCell.xib */; };
+		1AC446B41D24633D00F78515 /* LocationImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC446B31D24633D00F78515 /* LocationImageModel.swift */; };
+		1AC446BC1D2497EE00F78515 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC446BB1D2497EE00F78515 /* Place.swift */; };
+		1AC446BE1D249CA000F78515 /* GoogleDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC446BD1D249CA000F78515 /* GoogleDataManager.swift */; };
+		1AFF0FCF1D260D9D00575541 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF0FCB1D260D9C00575541 /* LocationDetailViewController.swift */; };
+		1AFF0FD01D260D9D00575541 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF0FCC1D260D9C00575541 /* LocationsViewController.swift */; };
+		1AFF0FD11D260D9D00575541 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF0FCD1D260D9D00575541 /* MapViewController.swift */; };
+		1AFF0FD21D260D9D00575541 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF0FCE1D260D9D00575541 /* ViewController.swift */; };
+		1AFF0FD41D260E1A00575541 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AFF0FD31D260E1A00575541 /* Info.plist */; };
+		1AFF0FD61D260E2500575541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFF0FD51D260E2500575541 /* AppDelegate.swift */; };
+		E9D11418616634A4876CC2C7 /* Pods_GenomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED450AAD666F96AFE137033 /* Pods_GenomeUITests.framework */; };
+		FF492EDDEF48517C9D0F9559 /* Pods_GenomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B000EA17D3F32414692D8F81 /* Pods_GenomeTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1A62817A1D2360440070C89D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A62815A1D2360440070C89D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A6281611D2360440070C89D;
+			remoteInfo = Genome;
+		};
+		1A6281851D2360440070C89D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A62815A1D2360440070C89D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A6281611D2360440070C89D;
+			remoteInfo = Genome;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A6281621D2360440070C89D /* Genome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Genome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A62816A1D2360440070C89D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1A62816D1D2360440070C89D /* Genome.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Genome.xcdatamodel; sourceTree = "<group>"; };
+		1A62816F1D2360440070C89D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A6281721D2360440070C89D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1A6281791D2360440070C89D /* GenomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A62817D1D2360440070C89D /* GenomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenomeTests.swift; sourceTree = "<group>"; };
+		1A62817F1D2360440070C89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A6281841D2360440070C89D /* GenomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A6281881D2360440070C89D /* GenomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenomeUITests.swift; sourceTree = "<group>"; };
+		1A62818A1D2360440070C89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A6281961D2361DC0070C89D /* LoginHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginHandler.swift; path = Genome/LoginHandler.swift; sourceTree = SOURCE_ROOT; };
+		1AC446AF1D24552B00F78515 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		1AC446B11D24559000F78515 /* LocationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationTableViewCell.xib; sourceTree = "<group>"; };
+		1AC446B31D24633D00F78515 /* LocationImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationImageModel.swift; path = Genome/LocationImageModel.swift; sourceTree = SOURCE_ROOT; };
+		1AC446BB1D2497EE00F78515 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Place.swift; path = Genome/Place.swift; sourceTree = SOURCE_ROOT; };
+		1AC446BD1D249CA000F78515 /* GoogleDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleDataManager.swift; path = Genome/GoogleDataManager.swift; sourceTree = SOURCE_ROOT; };
+		1AFF0FCB1D260D9C00575541 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationDetailViewController.swift; path = Genome/LocationDetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		1AFF0FCC1D260D9C00575541 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationsViewController.swift; path = Genome/LocationsViewController.swift; sourceTree = SOURCE_ROOT; };
+		1AFF0FCD1D260D9D00575541 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Genome/MapViewController.swift; sourceTree = SOURCE_ROOT; };
+		1AFF0FCE1D260D9D00575541 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Genome/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		1AFF0FD31D260E1A00575541 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AFF0FD51D260E2500575541 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Genome/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		1BDBE8A084A9788D46802686 /* Pods-GenomeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenomeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GenomeUITests/Pods-GenomeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		283EFE08679A0ACFD59F1EB8 /* Pods-Genome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Genome/Pods-Genome.debug.xcconfig"; sourceTree = "<group>"; };
+		2D8C6B1383F25702E38B7BD8 /* Pods-GenomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenomeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GenomeUITests/Pods-GenomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4B806EA168E6FF700DFF70F4 /* Pods-GenomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenomeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GenomeTests/Pods-GenomeTests.release.xcconfig"; sourceTree = "<group>"; };
+		7ED450AAD666F96AFE137033 /* Pods_GenomeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenomeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95C105C8DCB9152F16D632B6 /* Pods-Genome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genome.release.xcconfig"; path = "Pods/Target Support Files/Pods-Genome/Pods-Genome.release.xcconfig"; sourceTree = "<group>"; };
+		B000EA17D3F32414692D8F81 /* Pods_GenomeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenomeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1D09E431BDF1BFE5ECB81F6 /* Pods_Genome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Genome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF5DE3D9A857C921737DCD8E /* Pods-GenomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenomeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GenomeTests/Pods-GenomeTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A62815F1D2360440070C89D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1477D211DEF32AC506989504 /* Pods_Genome.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A6281761D2360440070C89D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF492EDDEF48517C9D0F9559 /* Pods_GenomeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A6281811D2360440070C89D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9D11418616634A4876CC2C7 /* Pods_GenomeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A6281591D2360440070C89D = {
+			isa = PBXGroup;
+			children = (
+				1A6281641D2360440070C89D /* Genome */,
+				1A62817C1D2360440070C89D /* GenomeTests */,
+				1A6281871D2360440070C89D /* GenomeUITests */,
+				1A6281631D2360440070C89D /* Products */,
+				99C4ECBD06CDEFF304CBD998 /* Pods */,
+				938376688E67DFD837C1AED3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1A6281631D2360440070C89D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A6281621D2360440070C89D /* Genome.app */,
+				1A6281791D2360440070C89D /* GenomeTests.xctest */,
+				1A6281841D2360440070C89D /* GenomeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A6281641D2360440070C89D /* Genome */ = {
+			isa = PBXGroup;
+			children = (
+				1AC446B51D24660800F78515 /* Controllers */,
+				1AC446B81D24662100F78515 /* Models */,
+				1AC446B71D24661C00F78515 /* Views */,
+				1A6281691D2360440070C89D /* Main.storyboard */,
+				1AFF0FD51D260E2500575541 /* AppDelegate.swift */,
+				1AFF0FD31D260E1A00575541 /* Info.plist */,
+				1A62816F1D2360440070C89D /* Assets.xcassets */,
+				1A6281711D2360440070C89D /* LaunchScreen.storyboard */,
+				1A62816C1D2360440070C89D /* Genome.xcdatamodeld */,
+			);
+			path = Genome;
+			sourceTree = "<group>";
+		};
+		1A62817C1D2360440070C89D /* GenomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				1A62817D1D2360440070C89D /* GenomeTests.swift */,
+				1A62817F1D2360440070C89D /* Info.plist */,
+			);
+			path = GenomeTests;
+			sourceTree = "<group>";
+		};
+		1A6281871D2360440070C89D /* GenomeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1A6281881D2360440070C89D /* GenomeUITests.swift */,
+				1A62818A1D2360440070C89D /* Info.plist */,
+			);
+			path = GenomeUITests;
+			sourceTree = "<group>";
+		};
+		1AC446B51D24660800F78515 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1AFF0FCB1D260D9C00575541 /* LocationDetailViewController.swift */,
+				1AFF0FCC1D260D9C00575541 /* LocationsViewController.swift */,
+				1AFF0FCD1D260D9D00575541 /* MapViewController.swift */,
+				1AFF0FCE1D260D9D00575541 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1AC446B71D24661C00F78515 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1AC446AF1D24552B00F78515 /* LocationTableViewCell.swift */,
+				1AC446B11D24559000F78515 /* LocationTableViewCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1AC446B81D24662100F78515 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1AC446BD1D249CA000F78515 /* GoogleDataManager.swift */,
+				1A6281961D2361DC0070C89D /* LoginHandler.swift */,
+				1AC446B31D24633D00F78515 /* LocationImageModel.swift */,
+				1AC446BB1D2497EE00F78515 /* Place.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		938376688E67DFD837C1AED3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1D09E431BDF1BFE5ECB81F6 /* Pods_Genome.framework */,
+				B000EA17D3F32414692D8F81 /* Pods_GenomeTests.framework */,
+				7ED450AAD666F96AFE137033 /* Pods_GenomeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99C4ECBD06CDEFF304CBD998 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				283EFE08679A0ACFD59F1EB8 /* Pods-Genome.debug.xcconfig */,
+				95C105C8DCB9152F16D632B6 /* Pods-Genome.release.xcconfig */,
+				EF5DE3D9A857C921737DCD8E /* Pods-GenomeTests.debug.xcconfig */,
+				4B806EA168E6FF700DFF70F4 /* Pods-GenomeTests.release.xcconfig */,
+				2D8C6B1383F25702E38B7BD8 /* Pods-GenomeUITests.debug.xcconfig */,
+				1BDBE8A084A9788D46802686 /* Pods-GenomeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A6281611D2360440070C89D /* Genome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A62818D1D2360440070C89D /* Build configuration list for PBXNativeTarget "Genome" */;
+			buildPhases = (
+				17097F39642F61DA141926C8 /* [CP] Check Pods Manifest.lock */,
+				1A62815E1D2360440070C89D /* Sources */,
+				1A62815F1D2360440070C89D /* Frameworks */,
+				1A6281601D2360440070C89D /* Resources */,
+				236471DB540753E4B784BBE9 /* [CP] Embed Pods Frameworks */,
+				1C821E48C61356129F911EE5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Genome;
+			productName = Genome;
+			productReference = 1A6281621D2360440070C89D /* Genome.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1A6281781D2360440070C89D /* GenomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A6281901D2360440070C89D /* Build configuration list for PBXNativeTarget "GenomeTests" */;
+			buildPhases = (
+				C362BC652E03E2EA84D8CE23 /* [CP] Check Pods Manifest.lock */,
+				1A6281751D2360440070C89D /* Sources */,
+				1A6281761D2360440070C89D /* Frameworks */,
+				1A6281771D2360440070C89D /* Resources */,
+				3BBBCD0C0861A295BBC37E4D /* [CP] Embed Pods Frameworks */,
+				C31765F7AB391336ABE17D6C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A62817B1D2360440070C89D /* PBXTargetDependency */,
+			);
+			name = GenomeTests;
+			productName = GenomeTests;
+			productReference = 1A6281791D2360440070C89D /* GenomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1A6281831D2360440070C89D /* GenomeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A6281931D2360440070C89D /* Build configuration list for PBXNativeTarget "GenomeUITests" */;
+			buildPhases = (
+				2C506B5510E145EF32FC607D /* [CP] Check Pods Manifest.lock */,
+				1A6281801D2360440070C89D /* Sources */,
+				1A6281811D2360440070C89D /* Frameworks */,
+				1A6281821D2360440070C89D /* Resources */,
+				A44BBF8FA308D4A4459D98AE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A6281861D2360440070C89D /* PBXTargetDependency */,
+			);
+			name = GenomeUITests;
+			productName = GenomeUITests;
+			productReference = 1A6281841D2360440070C89D /* GenomeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A62815A1D2360440070C89D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Matt Gioe";
+				TargetAttributes = {
+					1A6281611D2360440070C89D = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 4HDNC3V5Q6;
+					};
+					1A6281781D2360440070C89D = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 1A6281611D2360440070C89D;
+					};
+					1A6281831D2360440070C89D = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 1A6281611D2360440070C89D;
+					};
+				};
+			};
+			buildConfigurationList = 1A62815D1D2360440070C89D /* Build configuration list for PBXProject "Genome" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1A6281591D2360440070C89D;
+			productRefGroup = 1A6281631D2360440070C89D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A6281611D2360440070C89D /* Genome */,
+				1A6281781D2360440070C89D /* GenomeTests */,
+				1A6281831D2360440070C89D /* GenomeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A6281601D2360440070C89D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A6281731D2360440070C89D /* LaunchScreen.storyboard in Resources */,
+				1A6281701D2360440070C89D /* Assets.xcassets in Resources */,
+				1AC446B21D24559000F78515 /* LocationTableViewCell.xib in Resources */,
+				1AFF0FD41D260E1A00575541 /* Info.plist in Resources */,
+				1A62816B1D2360440070C89D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A6281771D2360440070C89D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A6281821D2360440070C89D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17097F39642F61DA141926C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1C821E48C61356129F911EE5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Genome/Pods-Genome-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		236471DB540753E4B784BBE9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Genome/Pods-Genome-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C506B5510E145EF32FC607D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3BBBCD0C0861A295BBC37E4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GenomeTests/Pods-GenomeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A44BBF8FA308D4A4459D98AE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GenomeUITests/Pods-GenomeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C31765F7AB391336ABE17D6C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GenomeTests/Pods-GenomeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C362BC652E03E2EA84D8CE23 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A62815E1D2360440070C89D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AFF0FD61D260E2500575541 /* AppDelegate.swift in Sources */,
+				1AFF0FCF1D260D9D00575541 /* LocationDetailViewController.swift in Sources */,
+				1AC446B01D24552B00F78515 /* LocationTableViewCell.swift in Sources */,
+				1AFF0FD01D260D9D00575541 /* LocationsViewController.swift in Sources */,
+				1AFF0FD11D260D9D00575541 /* MapViewController.swift in Sources */,
+				1AFF0FD21D260D9D00575541 /* ViewController.swift in Sources */,
+				1AC446BE1D249CA000F78515 /* GoogleDataManager.swift in Sources */,
+				1A6281971D2361DC0070C89D /* LoginHandler.swift in Sources */,
+				1A62816E1D2360440070C89D /* Genome.xcdatamodeld in Sources */,
+				1AC446B41D24633D00F78515 /* LocationImageModel.swift in Sources */,
+				1AC446BC1D2497EE00F78515 /* Place.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A6281751D2360440070C89D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A62817E1D2360440070C89D /* GenomeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A6281801D2360440070C89D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A6281891D2360440070C89D /* GenomeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1A62817B1D2360440070C89D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A6281611D2360440070C89D /* Genome */;
+			targetProxy = 1A62817A1D2360440070C89D /* PBXContainerItemProxy */;
+		};
+		1A6281861D2360440070C89D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A6281611D2360440070C89D /* Genome */;
+			targetProxy = 1A6281851D2360440070C89D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1A6281691D2360440070C89D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A62816A1D2360440070C89D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1A6281711D2360440070C89D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A6281721D2360440070C89D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1A62818B1D2360440070C89D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Gioe (X7W52A2NLE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew Gioe (X7W52A2NLE)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "76fd544a-c615-4020-b82e-51043eebb2cc";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1A62818C1D2360440070C89D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Gioe (X7W52A2NLE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew Gioe (X7W52A2NLE)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "76fd544a-c615-4020-b82e-51043eebb2cc";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1A62818E1D2360440070C89D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 283EFE08679A0ACFD59F1EB8 /* Pods-Genome.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Genome/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MWG.Genome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		1A62818F1D2360440070C89D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95C105C8DCB9152F16D632B6 /* Pods-Genome.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Genome/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MWG.Genome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		1A6281911D2360440070C89D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF5DE3D9A857C921737DCD8E /* Pods-GenomeTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GenomeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MWG.GenomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Genome.app/Genome";
+			};
+			name = Debug;
+		};
+		1A6281921D2360440070C89D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B806EA168E6FF700DFF70F4 /* Pods-GenomeTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GenomeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MWG.GenomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Genome.app/Genome";
+			};
+			name = Release;
+		};
+		1A6281941D2360440070C89D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D8C6B1383F25702E38B7BD8 /* Pods-GenomeUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = GenomeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MWG.GenomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Genome;
+			};
+			name = Debug;
+		};
+		1A6281951D2360440070C89D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BDBE8A084A9788D46802686 /* Pods-GenomeUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = GenomeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MWG.GenomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Genome;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A62815D1D2360440070C89D /* Build configuration list for PBXProject "Genome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A62818B1D2360440070C89D /* Debug */,
+				1A62818C1D2360440070C89D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A62818D1D2360440070C89D /* Build configuration list for PBXNativeTarget "Genome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A62818E1D2360440070C89D /* Debug */,
+				1A62818F1D2360440070C89D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A6281901D2360440070C89D /* Build configuration list for PBXNativeTarget "GenomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A6281911D2360440070C89D /* Debug */,
+				1A6281921D2360440070C89D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A6281931D2360440070C89D /* Build configuration list for PBXNativeTarget "GenomeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A6281941D2360440070C89D /* Debug */,
+				1A6281951D2360440070C89D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1A62816C1D2360440070C89D /* Genome.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1A62816D1D2360440070C89D /* Genome.xcdatamodel */,
+			);
+			currentVersion = 1A62816D1D2360440070C89D /* Genome.xcdatamodel */;
+			path = Genome.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1A62815A1D2360440070C89D /* Project object */;
+}
