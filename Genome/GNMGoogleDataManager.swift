@@ -18,7 +18,7 @@ private let GoogleURL = "https://maps.googleapis.com/maps/api/place/nearbysearch
 private let GoogleApiKey = "AIzaSyAe6warIT1Ngcvui5Q6DNYoUQ2re0xga3s"
 typealias NearbyPlacesRequestCompletionBlock = ([GNMPlaceModel]?, NSError?) -> ()
 typealias JSONRequestCompletionBlock = (JSON?, NSError?) -> ()
-typealias GetIndividualPlaceRequestCompletionBlock = (GMSPlace?) -> ()
+typealias GetIndividualPlaceRequestCompletionBlock = (GMSPlace?, NSError?) -> ()
 
 class GNMGoogleDataManager : NSObject{
     
@@ -40,11 +40,11 @@ class GNMGoogleDataManager : NSObject{
             (placeLikelihoodList: GMSPlaceLikelihoodList?, error: NSError?) -> Void in
             if let error = error {
                 print("Pick Place error: \(error.localizedDescription)")
-                return
+                completionHandler(nil, error)
             }
             if let placeLikelihoodList = placeLikelihoodList {
                 if let place = placeLikelihoodList.likelihoods.first?.place {
-                    completionHandler(place)
+                    completionHandler(place, nil)
                 }
             }
         })
@@ -103,7 +103,7 @@ class GNMGoogleDataManager : NSObject{
     
     func getNearbyLocationsWithCompletion(completion : NearbyPlacesRequestCompletionBlock) {
         //find a list of nearby places from our current postition
-        getCurrentPlace { (place) in
+        getCurrentPlace { (place, error) in
             
             if let place = place {
                 self.makeAPIRequest(place, completion: { (responseObject, error) in
@@ -114,9 +114,13 @@ class GNMGoogleDataManager : NSObject{
                         //set next page to nil in case we refresh and want the original places
                         self.pageString = nil;
                         
+                    } else {
+                        completion(nil, error)
                     }
                 })
             }
+            
+            completion(nil, error)
         }
     }
     

@@ -41,13 +41,15 @@ class GNMLocationsViewController: UITableViewController {
     func refreshTable() {
         
         placesManager.getNearbyLocationsWithCompletion{ (data,error) in
+            if ARSLineProgress.shown{
+                ARSLineProgress.hide()
+            }
             if (data != nil){
                 self.placeData = data
                 self.tableView.reloadData()
                 self.refreshControl?.endRefreshing()
-                if ARSLineProgress.shown{
-                    ARSLineProgress.hide()
-                }
+            } else {
+                self.throwErrorPop(error)
             }
         }
         
@@ -101,6 +103,16 @@ class GNMLocationsViewController: UITableViewController {
             destinationVC.place = placeData![row]
             
         }
+    }
+    
+    func throwErrorPop(error: NSError?) {
+        //display an error alert in case any of the location services requests fail
+        
+        let alert = UIAlertController.init(title: "Genome", message: error?.localizedDescription , preferredStyle: .Alert)
+        let dismissAction = UIAlertAction.init(title: "OK!", style: .Cancel, handler: { (action) in
+        })
+        alert.addAction(dismissAction)
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
 }
