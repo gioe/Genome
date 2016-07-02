@@ -10,7 +10,6 @@ import Foundation
 import FBSDKLoginKit
 import FBSDKCoreKit
 
-
 private let LoginStatusKeyForDefaults = "Login Status"
 
 /**

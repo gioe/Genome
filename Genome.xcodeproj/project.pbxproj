@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1477D211DEF32AC506989504 /* Pods_Genome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D09E431BDF1BFE5ECB81F6 /* Pods_Genome.framework */; };
 		1A0ECE661D26D5CA0080EBBA /* GenomePlaceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0ECE651D26D5CA0080EBBA /* GenomePlaceModelTests.swift */; };
+		1A5D36C21D283AA000997903 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D36C11D283AA000997903 /* APIService.swift */; };
+		1A5D36CA1D283CFB00997903 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D36C91D283CFB00997903 /* Constants.swift */; };
 		1A62816B1D2360440070C89D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A6281691D2360440070C89D /* Main.storyboard */; };
 		1A62816E1D2360440070C89D /* Genome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A62816C1D2360440070C89D /* Genome.xcdatamodeld */; };
 		1A6281701D2360440070C89D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A62816F1D2360440070C89D /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		1A0ECE651D26D5CA0080EBBA /* GenomePlaceModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenomePlaceModelTests.swift; sourceTree = "<group>"; };
+		1A5D36C11D283AA000997903 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		1A5D36C91D283CFB00997903 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1A6281621D2360440070C89D /* Genome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Genome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A62816A1D2360440070C89D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A62816D1D2360440070C89D /* Genome.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Genome.xcdatamodel; sourceTree = "<group>"; };
@@ -111,6 +115,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A5D36C81D283CE700997903 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1AC446BD1D249CA000F78515 /* GNMGoogleDataManager.swift */,
+				1A5D36C11D283AA000997903 /* APIService.swift */,
+				1A6281961D2361DC0070C89D /* GNMLoginHandler.swift */,
+				1A5D36C91D283CFB00997903 /* Constants.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		1A6281591D2360440070C89D = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +151,7 @@
 		1A6281641D2360440070C89D /* Genome */ = {
 			isa = PBXGroup;
 			children = (
+				1A5D36C81D283CE700997903 /* Helpers */,
 				1AC446B51D24660800F78515 /* Controllers */,
 				1AC446B81D24662100F78515 /* Models */,
 				1AC446B71D24661C00F78515 /* Views */,
@@ -191,8 +207,6 @@
 		1AC446B81D24662100F78515 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1AC446BD1D249CA000F78515 /* GNMGoogleDataManager.swift */,
-				1A6281961D2361DC0070C89D /* GNMLoginHandler.swift */,
 				1AC446B31D24633D00F78515 /* GNMLocationImageModel.swift */,
 				1AC446BB1D2497EE00F78515 /* GNMPlaceModel.swift */,
 			);
@@ -493,9 +507,11 @@
 				1AFF0FD11D260D9D00575541 /* GNMMapViewController.swift in Sources */,
 				1AFF0FD21D260D9D00575541 /* GNMLoginViewController.swift in Sources */,
 				1AC446BE1D249CA000F78515 /* GNMGoogleDataManager.swift in Sources */,
+				1A5D36CA1D283CFB00997903 /* Constants.swift in Sources */,
 				1A6281971D2361DC0070C89D /* GNMLoginHandler.swift in Sources */,
 				1A62816E1D2360440070C89D /* Genome.xcdatamodeld in Sources */,
 				1AC446B41D24633D00F78515 /* GNMLocationImageModel.swift in Sources */,
+				1A5D36C21D283AA000997903 /* APIService.swift in Sources */,
 				1AC446BC1D2497EE00F78515 /* GNMPlaceModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
