@@ -16,20 +16,25 @@ enum APIService {
     case GetNearbyPlaces(nextPage : String?, place : GMSPlace)
     
     /// Requests an image for a particular place
-    case GetPlaceImage(placeImageString : String?)
+    case GetPlaceImage(placeImageString : String?, place : GNMPlaceModel)
     
     var url : String {
         switch self {
             
-        case .GetPlaceImage(let placeImageString):
-            return "\(Constants.googleRootUrl)photo?maxwidth=400&photoreference=\(placeImageString)&key=\(Constants.GoogleAPIKey)"
+        case .GetPlaceImage(let placeImageString, let place):
+            
+            if let placeImageString = placeImageString{
+                return "\(Constants.googleRootUrl)photo?maxwidth=400&photoreference=\(placeImageString)&key=\(Constants.GoogleAPIKey)"
+            }
+            
+            return place.icon
             
         case .GetNearbyPlaces(let nextPageString, let place):
             if let nextPageString = nextPageString{
-                return "\(Constants.googleRootUrl)location=\(place.coordinate.latitude),\(place.coordinate.longitude)&radius=100&key=\(Constants.GoogleAPIKey)&pagetoken=\(nextPageString)"
+                return "\(Constants.googleRootUrl)nearbysearch/json?location=\(place.coordinate.latitude),\(place.coordinate.longitude)&radius=100&key=\(Constants.GoogleAPIKey)&pagetoken=\(nextPageString)"
             }
             
-            return "\(Constants.googleRootUrl)location=\(place.coordinate.latitude),\(place.coordinate.longitude)&radius=100&key=\(Constants.GoogleAPIKey)&pagetoken=\(nextPageString)"
+            return "\(Constants.googleRootUrl)nearbysearch/json?location=\(place.coordinate.latitude),\(place.coordinate.longitude)&radius=100&key=\(Constants.GoogleAPIKey)"
         
         }
     }

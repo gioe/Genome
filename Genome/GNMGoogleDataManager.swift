@@ -101,13 +101,12 @@ class GNMGoogleDataManager : NSObject{
                         completion(nil, error)
                     }
                 })
+            } else {
+                completion(nil, error)
             }
-            
-            completion(nil, error)
         }
     }
-    
-    /**
+            /**
      Use Alamofire to make request to GoogleMaps Web API
      
      - parameter place : GoogleMaps current Place required for nearby place querying
@@ -135,9 +134,12 @@ class GNMGoogleDataManager : NSObject{
                     //add a two second delay until the next call so the server doesn't return an error
                     let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
                     dispatch_after(delay, dispatch_get_main_queue()) {
+                        
                         self.sendRequest(endpoint: .GetNearbyPlaces(nextPage : self.pageString, place : self.currentPlace!), completion: { (response, error) in
+
                             completion(response, error)
                         })
+                        
                     }
                     
                 } else {
@@ -153,6 +155,8 @@ class GNMGoogleDataManager : NSObject{
     
     func parseJSONResponse(responseObject: JSON) -> [GNMPlaceModel]?{
         //can't limit the api request so in order to get to 25, we had to go up to 40 and then cut out the first 25
+        
+        print(responseObject)
         let subArray = responseObject.arrayObject![0...24]
         var finalArray = [GNMPlaceModel]()
         

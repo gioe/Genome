@@ -26,7 +26,7 @@ class GNMLocationImageModel: UIImage {
      */
     
     
-    func sendRequest(endpoint endpoint: APIService,
+    func sendRequest(endpoint endpoint: APIService, placeName : String,
                  completion: ImageRequestCompletionBlock) {
     
         Alamofire.request(endpoint.alamofireMethod, endpoint.url, parameters: nil)
@@ -36,7 +36,7 @@ class GNMLocationImageModel: UIImage {
                 case .Success(let value):
                     //return the image, add it to the cache
                     completion(value, nil)
-//                    self.imageCache.addImage(value, withIdentifier: place.name)
+                    self.imageCache.addImage(value, withIdentifier: placeName)
                 case .Failure(let value):
                     completion(nil, value)
                 }
@@ -56,9 +56,9 @@ class GNMLocationImageModel: UIImage {
         if let image = returnCachedImage(place.name){
             completion(image, nil)
         } else {
-            sendRequest(endpoint: .GetPlaceImage(placeImageString : place.imageUrl!), completion: { (image
+            sendRequest(endpoint: .GetPlaceImage(placeImageString : place.imageUrl, place : place), placeName : place.name, completion: { (image
                 , error) -> (Void) in
-                
+                completion(image, nil)
             })
         }
     }
