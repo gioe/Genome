@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Constants {
+struct GNMConstants {
     static let googleRootUrl = "https://maps.googleapis.com/maps/api/place/"
     static let GoogleAPIKey = "AIzaSyAe6warIT1Ngcvui5Q6DNYoUQ2re0xga3s"
 }

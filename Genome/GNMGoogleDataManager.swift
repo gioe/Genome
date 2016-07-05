@@ -77,11 +77,11 @@ class GNMGoogleDataManager : NSObject{
     }
 
     /**
-     Request nearby places from GoogleMaps API
+     Use our APIServices class to make request to GoogleMaps Web API
      
-     - parameter completion : Closure which returns an array of PlaceModel objects and error if applicable
-     
+     - parameter completion : Closure returning array of GNMPlaceModel objects determined from GoogleMaps JSON
      */
+
     
     func getNearbyLocationsWithCompletion(completion : NearbyPlacesRequestCompletionBlock) {
         //find a list of nearby places from our current postition
@@ -89,70 +89,45 @@ class GNMGoogleDataManager : NSObject{
             
             if let place = place {
                 self.currentPlace = place
-                self.sendRequest(endpoint: .GetNearbyPlaces(nextPage : nil, place : self.currentPlace!), completion: { (responseObject, error) in
-                    if responseObject != nil {
-                        //generate places from JSON
-                        completion(self.parseJSONResponse(JSON(self.jsonArray)), nil)
+                
+                GNMAPIService.makeJSONRequest(.GetNearbyPlaces(nextPage : nil, place : self.currentPlace!), success: { (responseObject) in
+                    self.pageString = responseObject["next_page_token"].stringValue
+                    
+                    //add the new results to the class property
+                    self.jsonArray += responseObject["results"].arrayObject!
+                    if self.jsonArray.count < 25{
                         
-                        //set next page to nil in case we refresh and want the original places
-                        self.pageString = nil;
+                        let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
                         
-                    } else {
-                        completion(nil, error)
+                        dispatch_after(delay, dispatch_get_main_queue()) {
+                            
+                            GNMAPIService.makeJSONRequest(.GetNearbyPlaces(nextPage : nil, place : self.currentPlace!), success: { (responseObject) in
+                                    completion(self.parseJSONResponse(responseObject), nil)
+                                }, failure: { (error) in
+                                    completion(nil, error)
+                            })
+                        }
+                        
                     }
+                    } , failure: { (error) in
+                        completion(nil, error)
                 })
+                
+                
             } else {
                 completion(nil, error)
             }
         }
     }
-            /**
-     Use Alamofire to make request to GoogleMaps Web API
+    
+    /**
+     Generates GNMModelPlace objects from the JSON object returned from the Google Maps API
      
-     - parameter place : GoogleMaps current Place required for nearby place querying
-     - parameter completion : Closure returning optional JSON from successful request
+     - parameter responseObject : JSON object from Google Maps API
+     - returns : array of GNMPlaceModel objects for internal use
      */
-    
-    func sendRequest(endpoint endpoint: APIService,
-                              completion: JSONRequestCompletionBlock) {
-        
-        /**
-         this function i'd love to refactor given more time. i'd like to do a little more resarch into the best conventions behind chained API requests. here i'm checking to see if the json array is less than 25 because if it is, we need to request more places per the spec. that means back to back api calls for which i'm sure there's an ccepted convention
-         */
-        
-        Alamofire.request(endpoint.alamofireMethod, endpoint.url, parameters: nil) .responseJSON { response in
-            switch response.result {
-            case .Success( _):
-                let json = JSON(data: response.data!)
-                //grab the token for query pagination
-                self.pageString = json["next_page_token"].stringValue
-                
-                //add the new results to the class property
-                self.jsonArray += json["results"].arrayObject!
-                if self.jsonArray.count < 25{
-                    
-                    //add a two second delay until the next call so the server doesn't return an error
-                    let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
-                    dispatch_after(delay, dispatch_get_main_queue()) {
-                        
-                        self.sendRequest(endpoint: .GetNearbyPlaces(nextPage : self.pageString, place : self.currentPlace!), completion: { (response, error) in
 
-                            completion(response, error)
-                        })
-                        
-                    }
-                    
-                } else {
-                    completion(JSON(self.jsonArray), nil)
-                }
-                
-            case .Failure(let value):
-                completion(nil , value)
-            }
-        }
-    }
-
-    
+ 
     func parseJSONResponse(responseObject: JSON) -> [GNMPlaceModel]?{
         //can't limit the api request so in order to get to 25, we had to go up to 40 and then cut out the first 25
         
@@ -172,8 +147,11 @@ class GNMGoogleDataManager : NSObject{
                 finalArray.append(newPlace)
             }
         }
+        
         return finalArray
+        
     }
+    
 }
 
 

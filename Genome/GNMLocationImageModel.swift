@@ -18,32 +18,6 @@ typealias ImageRequestCompletionBlock = (UIImage?, NSError?) -> (Void)
 class GNMLocationImageModel: UIImage {
     
     let imageCache = AutoPurgingImageCache()
-    
-    /**
-     Use AlamoFire to request and save image for GNMPlaceModel if one doesn't exist locally
-     - parameter place : GNMPlaceModel object whose image we want to request
-     - paramter completion : Closure which returns optional UIImage after successful request or an error
-     */
-    
-    
-    func sendRequest(endpoint endpoint: APIService, placeName : String,
-                 completion: ImageRequestCompletionBlock) {
-    
-        Alamofire.request(endpoint.alamofireMethod, endpoint.url, parameters: nil)
-            .responseImage { response in
-                print(response)
-                switch response.result {
-                case .Success(let value):
-                    //return the image, add it to the cache
-                    completion(value, nil)
-                    self.imageCache.addImage(value, withIdentifier: placeName)
-                case .Failure(let value):
-                    completion(nil, value)
-                }
-        }
-
-    }
-    
     /**
      Returns an image for GNMPlaceModel
      - parameter place : GNMPlaceModel object whose image we want
@@ -56,9 +30,12 @@ class GNMLocationImageModel: UIImage {
         if let image = returnCachedImage(place.name){
             completion(image, nil)
         } else {
-            sendRequest(endpoint: .GetPlaceImage(placeImageString : place.imageUrl, place : place), placeName : place.name, completion: { (image
-                , error) -> (Void) in
+            
+            GNMAPIService.makeImageRequest(.GetPlaceImage(placeImageString : place.imageUrl, place : place), success: { (image) in
+                self.imageCache.addImage(image, withIdentifier: place.name)
                 completion(image, nil)
+                }, failure: { (error) in
+                    completion(nil, error)
             })
         }
     }

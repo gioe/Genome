@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Genome/GNMLocationImageModel.swift"
-            timestampString = "489261709.314922"
+            filePath = "Genome/APIService.swift"
+            timestampString = "489416346.353627"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "grabImageForPlace(_:completion:)"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "makeImageRequest(_:success:failure:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
